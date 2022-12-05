@@ -27,9 +27,9 @@ insert into person (id, person_number, first_name, last_name,street,  zip, city,
 insert into price_scheme(id,lesson_type_price,skill_level_price,discount,description) values (1,1000,2000,1000,'Beginner single');
 insert into price_scheme(id,lesson_type_price,skill_level_price,discount,description) values (2,2000,4000,0,'Intermediate group');
 insert into price_scheme(id,lesson_type_price,skill_level_price,discount,description) values (3,3000,6000,100,'Advanced individual');
-insert into price_scheme(id,lesson_type_price,skill_level_price,discount,description) values (4,1000,1000,NULL,'Beginner ensamble');
+insert into price_scheme(id,lesson_type_price,skill_level_price,discount,description) values (4,1000,1000,NULL,'Beginner ensemble');
 insert into price_scheme(id,lesson_type_price,skill_level_price,discount,description) values (5,2000,2000,NULL,'Advanced group');
-insert into price_scheme(id,lesson_type_price,skill_level_price,discount,description) values (6,3000,3000,NULL,'Advanced ensamble');
+insert into price_scheme(id,lesson_type_price,skill_level_price,discount,description) values (6,3000,3000,NULL,'Advanced ensemble');
 
 insert into classroom(id, description, zip, street, city) values(1,'Located somewere', '12658','Somwhere Road 21', 'Stockholm');
 insert into classroom(id, description, zip, street, city) values(2,'Is located somewere', '12658','Somwhere Road 21', 'Stockholm');
@@ -49,33 +49,84 @@ insert into student(id,person_id,price_scheme_id,contact_email,contact_phone) va
 insert into student(id,person_id,price_scheme_id,contact_email,contact_phone) values(12,13,6,'posuere.vulputate.lacus@hotmail.net', '(772) 280-2476');
 insert into student(id,person_id,price_scheme_id,contact_email,contact_phone) values(13,14,1,'magna.a.neque@google.edu', '(468) 712-7644');
 insert into student(id,person_id,price_scheme_id,contact_email,contact_phone) values(14,15,2,'leo.elementum@google.edu', '(656) 523-8333');
+insert into student(id,person_id,price_scheme_id,contact_email,contact_phone) values(15,21,2,'leo.elementum@google.edu', '(656) 523-8333');
+insert into student(id,person_id,price_scheme_id,contact_email,contact_phone) values(16,22,2,'leo.elementum@google.edu', '(656) 523-8333');
+
 
 insert into sibling(id) values(1);
 insert into sibling(id) values(2);
 insert into sibling(id) values(3);
 insert into sibling(id) values(4);
+insert into sibling(id) values(5);
+insert into sibling(id) values(6);
+insert into sibling(id) values(7);
+insert into sibling(id) values(8);
+insert into sibling(id) values(9);
+insert into sibling(id) values(10);
 
-insert into student_sibling(student_id,sibling_id) values(1,2);
-insert into student_sibling(student_id,sibling_id) values(2,1);
-insert into student_sibling(student_id,sibling_id) values(3,4);
-insert into student_sibling(student_id,sibling_id) values(4,3);
+insert into student_sibling(student_id,sibling_id) values(11,1);
+insert into student_sibling(student_id,sibling_id) values(11,2);
+insert into student_sibling(student_id,sibling_id) values(11,3);
+insert into student_sibling(student_id,sibling_id) values(12,4);
+insert into student_sibling(student_id,sibling_id) values(13,5);
+insert into student_sibling(student_id,sibling_id) values(13,6);
+insert into student_sibling(student_id,sibling_id) values(14,7);
+insert into student_sibling(student_id,sibling_id) values(15,8);
+insert into student_sibling(student_id,sibling_id) values(15,9);
+insert into student_sibling(student_id,sibling_id) values(16,10);
 
-insert into instructor(id,person_id,price_scheme_id,teach_ensambles) values(1,15,1,TRUE);
-insert into instructor(id,person_id,price_scheme_id,teach_ensambles) values(2,16,1,TRUE);
-insert into instructor(id,person_id,price_scheme_id,teach_ensambles) values(3,17,1,TRUE);
-insert into instructor(id,person_id,price_scheme_id,teach_ensambles) values(4,18,1,TRUE);
-insert into instructor(id,person_id,price_scheme_id,teach_ensambles) values(5,19,1,TRUE);
-insert into instructor(id,person_id,price_scheme_id,teach_ensambles) values(6,20,1,TRUE);
+insert into instructor(id,person_id,price_scheme_id,teach_ensembles) values(1,15,1,TRUE);
+insert into instructor(id,person_id,price_scheme_id,teach_ensembles) values(2,16,1,TRUE);
+insert into instructor(id,person_id,price_scheme_id,teach_ensembles) values(3,17,1,TRUE);
+insert into instructor(id,person_id,price_scheme_id,teach_ensembles) values(4,18,1,TRUE);
+insert into instructor(id,person_id,price_scheme_id,teach_ensembles) values(5,19,1,TRUE);
+insert into instructor(id,person_id,price_scheme_id,teach_ensembles) values(6,20,1,TRUE);
 
 
-insert into lesson(id,classroom_id,instructor_id,time,skill_level) values(1,1,1,'2021/02/13 08:00:00','Beginner');
-insert into lesson(id,classroom_id,instructor_id,time,skill_level) values(2,1,2,'2021/02/15 09:00:00','Intermediate');
-insert into lesson(id,classroom_id,instructor_id,time,skill_level) values(3,1,3,'2021/02/19 10:00:00','Advanced');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(1,1,1,'2022/01/13 08:00:00','Beginner','Single lesson');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(2,1,2,'2022/01/15 09:00:00','Intermediate','Single lesson');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(3,1,3,'2022/01/19 10:00:00','Advanced','Single lesson');
 
-insert into lesson(id,classroom_id,instructor_id,time,skill_level) values(4,2,3,'2021/03/22 10:00:00','Intermediate');
-insert into lesson(id,classroom_id,instructor_id,time,skill_level) values(5,2,3,'2021/03/05 10:00:00','Advanced');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(24,1,1,'2022/01/13 09:00:00','Beginner','Single lesson');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(25,1,2,'2022/01/15 10:00:00','Intermediate','Single lesson');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(26,1,3,'2022/01/19 11:00:00','Advanced','Single lesson');
 
-insert into lesson(id,classroom_id,instructor_id,time,skill_level) values(6,3,3,'2021/03/05 10:00:00','Advanced');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(4,2,3,'2022/02/22 10:00:00','Intermediate','Group lesson');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(5,2,3,'2022/02/05 10:00:00','Advanced','Group lesson');
+
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(6,3,3,'2022/12/08 10:00:00','Advanced','Ensemble');
+
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(7,1,1,'2022/03/13 08:00:00','Beginner','Single lesson');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(8,1,2,'2022/03/15 09:00:00','Intermediate','Single lesson');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(9,1,3,'2022/03/19 10:00:00','Advanced','Single lesson');
+
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(10,2,3,'2022/04/22 10:00:00','Intermediate','Group lesson');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(11,2,3,'2022/04/05 10:00:00','Advanced','Group lesson');
+
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(12,3,3,'2022/12/08 10:00:00','Advanced','Ensemble');
+
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(13,1,1,'2022/03/13 08:00:00','Beginner','Single lesson');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(14,1,2,'2022/03/15 09:00:00','Intermediate','Single lesson');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(15,1,4,'2022/03/19 10:00:00','Advanced','Single lesson');
+
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(27,1,1,'2022/03/13 14:00:00','Beginner','Single lesson');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(28,1,2,'2022/03/15 15:00:00','Intermediate','Single lesson');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(29,1,4,'2022/03/19 16:00:00','Advanced','Single lesson');
+
+
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(30,1,1,'2022/04/13 14:00:00','Beginner','Single lesson');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(31,1,2,'2022/04/15 15:00:00','Intermediate','Single lesson');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(32,1,4,'2022/04/19 16:00:00','Advanced','Single lesson');
+
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(16,2,4,'2022/04/22 10:00:00','Intermediate','Group lesson');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(17,2,4,'2022/04/05 10:00:00','Advanced','Group lesson');
+
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(18,3,4,'2022/12/08 10:00:00','Advanced','Ensemble');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(19,3,4,'2022/12/15 12:00:00','Advanced','Ensemble');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(20,3,4,'2022/12/15 10:00:00','Intermediate','Ensemble');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(21,3,4,'2022/12/15 10:00:00','Intermediate','Ensemble');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(22,3,4,'2022/12/15 10:00:00','Beginner','Ensemble');
+insert into lesson(id,classroom_id,instructor_id,time,skill_level,lesson_type) values(23,3,4,'2022/12/15 10:00:00','Beginner','Ensemble');
 
 
 insert into instrument(id,brand,type) values(1,'piano', 'G Brand');
@@ -92,8 +143,8 @@ insert into instrument(id,brand,type) values(10,'E Instrument', 'H Brand');
 
 insert into instrument(id,brand,type) values(11,'Kvargiurt', 'K Brand');
 
-insert into rented_instrument(instrument_id,student_id,time_rented,price,is_available) values(1,14,'2021/02/24 08:00:00',5000,FALSE);
-insert into rented_instrument(instrument_id,student_id,time_rented,price,is_available) values(2,13,'2021/03/27 08:00:00',500,FALSE);
+insert into rented_instrument(instrument_id,student_id,time_rented,price,is_available) values(1,14,'2022/02/24 08:00:00',5000,FALSE);
+insert into rented_instrument(instrument_id,student_id,time_rented,price,is_available) values(2,13,'2022/03/27 08:00:00',500,FALSE);
 insert into rented_instrument(instrument_id,student_id,time_rented,price,is_available) values(3,12,'2022/03/27 08:00:00',250,FALSE);
 insert into rented_instrument(instrument_id,student_id,time_rented,price,is_available) values(4,NULL,NULL,800,TRUE);
 insert into rented_instrument(instrument_id,student_id,time_rented,price,is_available) values(5,NULL,NULL,1000,TRUE);
@@ -130,11 +181,97 @@ insert into student_lesson(student_id,lesson_id) values(3,6);
 insert into student_lesson(student_id,lesson_id) values(4,6);
 insert into student_lesson(student_id,lesson_id) values(5,6);
 
+insert into student_lesson(student_id,lesson_id) values(6,6);
+insert into student_lesson(student_id,lesson_id) values(7,6);
+insert into student_lesson(student_id,lesson_id) values(8,12);
+insert into student_lesson(student_id,lesson_id) values(9,12);
+insert into student_lesson(student_id,lesson_id) values(10,12);
+
+insert into student_lesson(student_id,lesson_id) values(11,12);
+insert into student_lesson(student_id,lesson_id) values(12,12);
+insert into student_lesson(student_id,lesson_id) values(13,12);
+insert into student_lesson(student_id,lesson_id) values(14,12);
+insert into student_lesson(student_id,lesson_id) values(15,18);
+
+insert into student_lesson(student_id,lesson_id) values(16,18);
+insert into student_lesson(student_id,lesson_id) values(1,18);
+insert into student_lesson(student_id,lesson_id) values(2,18);  
+insert into student_lesson(student_id,lesson_id) values(3,18);
+insert into student_lesson(student_id,lesson_id) values(4,19);
+
+insert into student_lesson(student_id,lesson_id) values(5,19);
+insert into student_lesson(student_id,lesson_id) values(6,19);
+insert into student_lesson(student_id,lesson_id) values(7,19);
+insert into student_lesson(student_id,lesson_id) values(8,19);
+insert into student_lesson(student_id,lesson_id) values(9,19);
+
+insert into student_lesson(student_id,lesson_id) values(10,19);
+insert into student_lesson(student_id,lesson_id) values(11,19);
+insert into student_lesson(student_id,lesson_id) values(12,20);
+insert into student_lesson(student_id,lesson_id) values(13,20);
+insert into student_lesson(student_id,lesson_id) values(14,20);
+
+insert into student_lesson(student_id,lesson_id) values(15,20);
+insert into student_lesson(student_id,lesson_id) values(16,20);
+insert into student_lesson(student_id,lesson_id) values(1,21);
+insert into student_lesson(student_id,lesson_id) values(2,21);
+insert into student_lesson(student_id,lesson_id) values(3,21);
+
+insert into student_lesson(student_id,lesson_id) values(4,21);
+insert into student_lesson(student_id,lesson_id) values(5,21);
+insert into student_lesson(student_id,lesson_id) values(6,22);
+insert into student_lesson(student_id,lesson_id) values(7,22);
+insert into student_lesson(student_id,lesson_id) values(8,22);
+
+insert into student_lesson(student_id,lesson_id) values(9,22);
+insert into student_lesson(student_id,lesson_id) values(10,22);
+insert into student_lesson(student_id,lesson_id) values(11,23);
+insert into student_lesson(student_id,lesson_id) values(12,23);
+insert into student_lesson(student_id,lesson_id) values(13,23);
+insert into student_lesson(student_id,lesson_id) values(11,22);
+insert into student_lesson(student_id,lesson_id) values(12,22);
+insert into student_lesson(student_id,lesson_id) values(1,23);
+insert into student_lesson(student_id,lesson_id) values(2,23);
+
 insert into single_lesson(lesson_id) values(1);
 insert into single_lesson(lesson_id) values(2);
 insert into single_lesson(lesson_id) values(3);
 
-insert into group_lesson(lesson_id, enrolled_students, min_students) values(4,3,2);
-insert into group_lesson(lesson_id, enrolled_students, min_students) values(5,3,2);
+insert into single_lesson(lesson_id) values(7);
+insert into single_lesson(lesson_id) values(8);
+insert into single_lesson(lesson_id) values(9);
 
-insert into ensamble(lesson_id,genre,enrolled_students) values(6,'Music',5);
+insert into single_lesson(lesson_id) values(13);
+insert into single_lesson(lesson_id) values(14);
+insert into single_lesson(lesson_id) values(15);
+
+insert into single_lesson(lesson_id) values(24);
+insert into single_lesson(lesson_id) values(25);
+insert into single_lesson(lesson_id) values(26);
+
+insert into single_lesson(lesson_id) values(27);
+insert into single_lesson(lesson_id) values(28);
+insert into single_lesson(lesson_id) values(29);
+
+insert into single_lesson(lesson_id) values(30);
+insert into single_lesson(lesson_id) values(31);
+insert into single_lesson(lesson_id) values(31);
+
+insert into group_lesson(lesson_id, max_students, min_students) values(4,3,2);
+insert into group_lesson(lesson_id, max_students, min_students) values(5,3,2);
+
+insert into group_lesson(lesson_id, max_students, min_students) values(10,3,2);
+insert into group_lesson(lesson_id, max_students, min_students) values(11,3,2);
+
+insert into group_lesson(lesson_id, max_students, min_students) values(16,3,2);
+insert into group_lesson(lesson_id, max_students, min_students) values(17,3,2);
+
+insert into ensemble(lesson_id,genre,min_students,max_students) values(6,'Music A',5,9);
+insert into ensemble(lesson_id,genre,min_students,max_students) values(12,'Music B',5,9);
+insert into ensemble(lesson_id,genre,min_students,max_students) values(18,'Music C',5,9);
+insert into ensemble(lesson_id,genre,min_students,max_students) values(19,'Music A',5,9);
+insert into ensemble(lesson_id,genre,min_students,max_students) values(20,'Music B',5,9);
+insert into ensemble(lesson_id,genre,min_students,max_students) values(21,'Music B',5,9);
+insert into ensemble(lesson_id,genre,min_students,max_students) values(22,'Music A',5,9);
+insert into ensemble(lesson_id,genre,min_students,max_students) values(23,'Music B',5,9);
+
