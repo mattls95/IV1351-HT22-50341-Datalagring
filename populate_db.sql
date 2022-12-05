@@ -253,9 +253,6 @@ insert into single_lesson(lesson_id) values(27);
 insert into single_lesson(lesson_id) values(28);
 insert into single_lesson(lesson_id) values(29);
 
-insert into single_lesson(lesson_id) values(30);
-insert into single_lesson(lesson_id) values(31);
-insert into single_lesson(lesson_id) values(31);
 
 insert into group_lesson(lesson_id, max_students, min_students) values(4,3,2);
 insert into group_lesson(lesson_id, max_students, min_students) values(5,3,2);
