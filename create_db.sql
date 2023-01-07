@@ -34,14 +34,9 @@ CREATE TABLE "student"(
     "contact_phone" varchar(100)
 );
 
-CREATE TABLE "sibling"(
-    "id" SERIAL REFERENCES "person",
-    PRIMARY KEY("id")
-);
-
 CREATE TABLE "student_sibling"(
     "student_id" SERIAL REFERENCES "student" ON DELETE CASCADE,
-    "sibling_id" SERIAL REFERENCES "sibling" ON DELETE CASCADE,
+    "sibling_id" SERIAL REFERENCES "student" ON DELETE CASCADE,
     PRIMARY KEY("student_id", "sibling_id")
 );
 

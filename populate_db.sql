@@ -52,28 +52,48 @@ insert into student(id,person_id,price_scheme_id,contact_email,contact_phone) va
 insert into student(id,person_id,price_scheme_id,contact_email,contact_phone) values(15,21,2,'leo.elementum@google.edu', '(656) 523-8333');
 insert into student(id,person_id,price_scheme_id,contact_email,contact_phone) values(16,22,2,'leo.elementum@google.edu', '(656) 523-8333');
 
-
-insert into sibling(id) values(1);
-insert into sibling(id) values(2);
-insert into sibling(id) values(3);
-insert into sibling(id) values(4);
-insert into sibling(id) values(5);
-insert into sibling(id) values(6);
-insert into sibling(id) values(7);
-insert into sibling(id) values(8);
-insert into sibling(id) values(9);
-insert into sibling(id) values(10);
+insert into student(id,person_id,price_scheme_id,contact_email,contact_phone) values(17,23,2,'leo.elementum@google.edu', '(656) 523-8333');
+insert into student(id,person_id,price_scheme_id,contact_email,contact_phone) values(18,24,2,'leo.elementum@google.edu', '(656) 523-8333');
+insert into student(id,person_id,price_scheme_id,contact_email,contact_phone) values(19,25,2,'leo.elementum@google.edu', '(656) 523-8333');
+insert into student(id,person_id,price_scheme_id,contact_email,contact_phone) values(20,12,2,'leo.elementum@google.edu', '(656) 523-8333');
+insert into student(id,person_id,price_scheme_id,contact_email,contact_phone) values(21,16,2,'leo.elementum@google.edu', '(656) 523-8333');
 
 insert into student_sibling(student_id,sibling_id) values(11,1);
 insert into student_sibling(student_id,sibling_id) values(11,2);
 insert into student_sibling(student_id,sibling_id) values(11,3);
+insert into student_sibling(student_id,sibling_id) values(1,2);
+insert into student_sibling(student_id,sibling_id) values(1,3);
+insert into student_sibling(student_id,sibling_id) values(1,11);
+insert into student_sibling(student_id,sibling_id) values(2,1);
+insert into student_sibling(student_id,sibling_id) values(2,3);
+insert into student_sibling(student_id,sibling_id) values(2,11);
+insert into student_sibling(student_id,sibling_id) values(3,1);
+insert into student_sibling(student_id,sibling_id) values(3,2);
+insert into student_sibling(student_id,sibling_id) values(3,11);
+
 insert into student_sibling(student_id,sibling_id) values(12,4);
+insert into student_sibling(student_id,sibling_id) values(4,12);
+
 insert into student_sibling(student_id,sibling_id) values(13,5);
 insert into student_sibling(student_id,sibling_id) values(13,6);
+insert into student_sibling(student_id,sibling_id) values(5,13);
+insert into student_sibling(student_id,sibling_id) values(5,6);
+insert into student_sibling(student_id,sibling_id) values(6,13);
+insert into student_sibling(student_id,sibling_id) values(6,5);
+
 insert into student_sibling(student_id,sibling_id) values(14,7);
+insert into student_sibling(student_id,sibling_id) values(7,14);
+
 insert into student_sibling(student_id,sibling_id) values(15,8);
 insert into student_sibling(student_id,sibling_id) values(15,9);
+insert into student_sibling(student_id,sibling_id) values(8,15);
+insert into student_sibling(student_id,sibling_id) values(8,9);
+insert into student_sibling(student_id,sibling_id) values(9,8);
+insert into student_sibling(student_id,sibling_id) values(9,15);
+
+
 insert into student_sibling(student_id,sibling_id) values(16,10);
+insert into student_sibling(student_id,sibling_id) values(10,16);
 
 insert into instructor(id,person_id,price_scheme_id,teach_ensembles) values(1,15,1,TRUE);
 insert into instructor(id,person_id,price_scheme_id,teach_ensembles) values(2,16,1,TRUE);
@@ -253,6 +273,9 @@ insert into single_lesson(lesson_id) values(27);
 insert into single_lesson(lesson_id) values(28);
 insert into single_lesson(lesson_id) values(29);
 
+insert into single_lesson(lesson_id) values(30);
+insert into single_lesson(lesson_id) values(31);
+insert into single_lesson(lesson_id) values(31);
 
 insert into group_lesson(lesson_id, max_students, min_students) values(4,3,2);
 insert into group_lesson(lesson_id, max_students, min_students) values(5,3,2);
